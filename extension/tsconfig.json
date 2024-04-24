@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "ES6",
+        "alwaysStrict": true,
+
+        "moduleResolution": "node",
+        "allowJs": true,
+
+        "outDir": "./dist",
+        "sourceMap": true,
+        // https://stackoverflow.com/a/70856713
+        "types": [],
+        // https://stackoverflow.com/a/55102966
+        "lib": ["es2022", "dom", "dom.iterable"],
+
+        "strict": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        "useUnknownInCatchVariables": true,
+        "noUncheckedIndexedAccess": true
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+}

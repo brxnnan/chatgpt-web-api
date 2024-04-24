@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "ChatGPT Web API Extension",
+    "version": "1.0",
+    "description": "Utilize ChatGPT web as an API",
+    "permissions": [ "tabs" ],
+    "host_permissions": [
+        "*://chat.openai.com/*"
+    ],
+    "background": {},
+    "content_scripts": [
+        {
+            "matches": [
+                "*://chat.openai.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icons/grayscale_icon.webp"
+    },
+    "content_security_policy": {
+        "extension_pages": "default-src 'self'; connect-src 'self' ws://localhost:*; object-src 'none';"
+    }
+}
